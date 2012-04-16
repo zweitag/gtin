@@ -18,13 +18,13 @@ module GTIN
   def ean?
     # self = self.to_s.gsub(/[\D]+/, "").split(//)
     return false if self.length != 13
-    valid_checksum?
+    valid_gtin_checksum?
   end
   
   def upc?
     # self = self.to_s.gsub(/[\D]+/, "").split(//)
     return false if self.length != 12
-    valid_checksum?
+    valid_gtin_checksum?
   end
 
   # FOR A UPC:
@@ -35,7 +35,7 @@ module GTIN
   # divide the result of step 4 by 10. The check digit is the number which adds the remainder to 10.
 
   # Determine if a gtin value has a valid checksum
-  def valid_checksum?
+  def valid_gtin_checksum?
     number = self.reverse
     odd = even = 0
     

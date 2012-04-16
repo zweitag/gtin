@@ -24,8 +24,8 @@ Inspired by the EAN gem by Pascal Belloncle (nano RAILS)
 	'731346000101'.to_ean  ==> '0731346000101'
 	'731346000101'.to_gtin ==> '000731346000101'
 
-	'0731346000101'.valid_checksum? ==> true
-	'0731346000105'.valid_checksum? ==> false
+	'0731346000101'.valid_gtin_checksum? ==> true
+	'0731346000105'.valid_gtin_checksum? ==> false
 	
 	Also adds .odd? and .even? to the Integer class
 	
