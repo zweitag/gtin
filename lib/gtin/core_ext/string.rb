@@ -28,6 +28,7 @@ module GTIN
 
       # Determine if a gtin value has a valid checksum
       def valid_gtin_checksum?
+        return false if self.length == 0
         number = self.reverse
         odd = even = 0
 
